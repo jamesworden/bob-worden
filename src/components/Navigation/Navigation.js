@@ -6,24 +6,24 @@ import { Container } from "../Containers/Containers"
 import HamburgerMenu from "react-hamburger-menu"
 
 const Navigation = ({ home }) => {
-  let condensed = window.innerWidth < 768 ? true : false
-  let position = home ? "absolute" : "relative"
-  let color = home ? "white" : "black"
-
   const [open, setOpen] = useState(false)
   const handleClick = () => {
     setOpen(!open)
   }
 
-  const [size, setSize] = useState([0, 0])
+  const [width, setWidth] = useState(0)
   useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight])
+    function updateWidth() {
+      setWidth([window.innerWidth])
     }
-    window.addEventListener("resize", updateSize)
-    updateSize()
-    return () => window.removeEventListener("resize", updateSize)
+    window.addEventListener("resize", updateWidth)
+    updateWidth()
+    return () => window.removeEventListener("resize", updateWidth)
   }, [])
+
+  let condensed = width < 768 ? true : false
+  let position = home ? "absolute" : "relative"
+  let color = home ? "white" : "black"
 
   return (
     <Container position={position}>
