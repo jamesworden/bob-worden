@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../layouts/Layout"
-import Landing from "../components/landing/landing"
+// import Landing from "../components/landing/landing"
 import Card from "../components/Card/Card"
 import { Section, SmallSection } from "../components/Containers/Containers"
 
 export default () => (
+  // hey
   // <Layout home>
   //   <Landing />
   //   <Section backgroundColor="#3D3C47">
