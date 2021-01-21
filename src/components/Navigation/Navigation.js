@@ -44,7 +44,7 @@ const Navigation = ({ home }) => {
                 menuClicked={handleClick.bind(this)}
                 width={18}
                 height={16}
-                strokeWidth={1 + window.innerWidth / 1000}
+                strokeWidth={1 + width / 1000}
                 rotate={0}
                 color={color}
                 borderRadius={0}
