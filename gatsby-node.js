@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      wpcontent {
+      wpgraphql {
         posts {
           nodes {
             slug
@@ -14,7 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.wpcontent.posts.nodes.forEach(node => {
+    result.data.wpgraphql.posts.nodes.forEach(node => {
       createPage({
         path: node.slug,
         component: path.resolve("./src/layouts/ArticleLayout.js"),
