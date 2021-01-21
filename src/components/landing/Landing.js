@@ -34,7 +34,7 @@ const Grid = () => (
   </section>
 )
 
-const landing = () => (
+const Landing = () => (
   <header className={styles.container}>
     <div className={styles.content}>
       <Container>
@@ -62,4 +62,4 @@ const landing = () => (
   </header>
 )
 
-export default landing
+export default Landing
