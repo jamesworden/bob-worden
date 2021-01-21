@@ -1,14 +1,9 @@
 import React from "react"
 import Layout from "./Layout"
-import Container from "../components/Container"
 import { graphql } from "gatsby"
 
 const ArticleLayout = ({ children }) => {
-  return (
-    <Layout>
-      <Container>{children}</Container>
-    </Layout>
-  )
+  return <Layout>{children}</Layout>
 }
 
 export default ArticleLayout

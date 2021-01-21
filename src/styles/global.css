@@ -3,25 +3,77 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  font-family: "Merriweather";
+  font-family: "Lato";
   font-weight: normal;
-  color: #2a2a2a;
+  color: black;
+  overflow-x: hidden;
 }
 
-.title {
+h1 {
   font-family: "Lora";
-  font-size: 8vw;
+  font-size: 46px;
+  font-weight: 100;
+}
+h2 {
+  font-family: "Lora";
+  font-size: 20px;
+  font-weight: 100;
+}
+h3 {
+  font-family: "Lora";
+  font-size: 16px;
+  font-weight: 100;
+}
+p,
+span,
+li {
+  font-size: 12px;
+  font-weight: 100;
 }
 
-.subtitle {
-  font-size: 6vw;
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 5rem;
+@media (max-width: 478px) {
+  h1 {
+    font-family: "Lora";
+    font-size: 38px;
   }
-  .subtitle {
-    font-size: 2rem;
+}
+@media (min-width: 668px) {
+  h1 {
+    font-family: "Lora";
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p,
+  span,
+  li {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1008px) {
+  h1 {
+    font-family: "Lora";
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  p,
+  span,
+  li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  h1 {
+    font-size: 33px;
   }
 }

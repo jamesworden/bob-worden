@@ -1,0 +1,44 @@
+.container {
+  max-width: 1070px;
+  padding: 0rem 1rem;
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  padding: 3rem 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 1008px) {
+  .section {
+    padding: 6rem;
+  }
+}
+
+.small-section {
+  max-width: 280px;
+}
+@media (min-width: 668px) {
+  .small-section {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1008px) {
+  .small-section {
+    max-width: 500px;
+  }
+}

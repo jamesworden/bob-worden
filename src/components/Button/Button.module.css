@@ -1,0 +1,33 @@
+button {
+  padding: 1rem 2.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #c4b57a;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: bolder;
+  border: 1px solid transparent;
+  transition: ease-in-out 0.3s;
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 20px;
+  }
+}
+
+button:hover {
+  background-color: transparent;
+  border: solid 1px #c4b57a;
+  color: #c4b57a;
+  transition: ease-in-out 0.3s;
+}

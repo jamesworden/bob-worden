@@ -1,13 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Robert Worden",
+    title: "Bob Worden",
     description: "Mediator & Arbitrator",
     keywords: "Law, Lawyer, Mediator, Arbitrator",
     url: "https://www.bobworden.com",
@@ -40,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `WPGraphQL`,
-        fieldName: `wpcontent`,
+        fieldName: `wpgraphql`,
         url: `https://wordpress.bobworden.com/graphql`,
         refetchInterval: 60,
       },
