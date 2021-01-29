@@ -1,0 +1,25 @@
+.container {
+  padding-top: 6rem;
+  max-width: 1008px;
+  width: 100%;
+}
+@media (min-width: 668px) {
+  .container {
+    padding-top: 7rem;
+  }
+}
+@media (min-width: 1008px) {
+  .container {
+    padding-top: 9rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .centered {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.centered {
+  width: 100%;
+}

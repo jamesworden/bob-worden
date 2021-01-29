@@ -1,7 +1,7 @@
 import React from "react"
-import Footer from "../components/Footer/Footer"
+import Footer from "../components/Footer"
 import SEO from "../components/SEO"
-import Navigation from "../components/Navigation/Navigation"
+import Navigation from "../components/Navigation"
 
 const Layout = ({ children, seoTitle, seoDescription, home }) => {
   return (
@@ -13,8 +13,8 @@ const Layout = ({ children, seoTitle, seoDescription, home }) => {
         minHeight: "100vh",
       }}
     >
-      <SEO title={seoTitle} description={seoDescription} />
       <Navigation home={home} />
+      <SEO title={seoTitle} description={seoDescription} />
       {children}
       <Footer />
     </div>

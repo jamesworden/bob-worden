@@ -1,0 +1,11 @@
+.image {
+  max-width: 20rem;
+  max-height: 20rem;
+  margin: 1rem;
+}
+@media (max-width: 350px) {
+  .image {
+    width: 80vw;
+    height: 80vw;
+  }
+}
