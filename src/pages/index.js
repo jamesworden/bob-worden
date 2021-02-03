@@ -13,30 +13,31 @@ import CallToAction from "../components/Index/CallToAction"
 import { graphql } from "gatsby"
 
 export default ({ data }) => (
-  <HomeLayout>
-    <Landing
-      title={data.wpgraphql.landing.title}
-      content={data.wpgraphql.landing.content}
-      additionalInformation={
-        data.wpgraphql.landing.additional_information.additionalInformation
-      }
-    />
-    <SectionA />
-    <SectionB />
-    <Card
-      title={data.wpgraphql.card.title}
-      content={data.wpgraphql.card.content}
-      additionalInformation={
-        data.wpgraphql.card.additional_information.additionalInformation
-      }
-    />
-    <SectionC />
-    <Video />
-    <Resume />
-    <FeaturedArticles />
-    <FeaturedBlogPosts />
-    <CallToAction />
-  </HomeLayout>
+  <div>This website is under construction.</div>
+  // <HomeLayout>
+  //   <Landing
+  //     title={data.wpgraphql.landing.title}
+  //     content={data.wpgraphql.landing.content}
+  //     additionalInformation={
+  //       data.wpgraphql.landing.additional_information.additionalInformation
+  //     }
+  //   />
+  //   <SectionA />
+  //   <SectionB />
+  //   <Card
+  //     title={data.wpgraphql.card.title}
+  //     content={data.wpgraphql.card.content}
+  //     additionalInformation={
+  //       data.wpgraphql.card.additional_information.additionalInformation
+  //     }
+  //   />
+  //   <SectionC />
+  //   <Video />
+  //   <Resume />
+  //   <FeaturedArticles />
+  //   <FeaturedBlogPosts />
+  //   <CallToAction />
+  // </HomeLayout>
 )
 
 export const query = graphql`
