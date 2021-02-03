@@ -15,9 +15,4 @@ module.exports = {
     })
     return array
   },
-  // Sort articles before their date has been formated
-  sortArticlesByDate: array => {
-    console.log("Sorted!")
-    return array
-  },
 }

@@ -6,12 +6,12 @@ const Line = ({ color = "black", partial, space, half }) => (
     style={{
       float: "left",
       backgroundColor: "none",
-      height: "1px",
+      height: "2px",
       border: 0,
-      borderTop: "1px",
+      borderTop: "2px",
       borderStyle: "solid",
       borderColor: color,
-      width: partial ? "33%" : half ? "50%" : "100%",
+      width: partial ? "5rem" : half ? "50%" : "100%",
       marginTop: space ? ".5rem" : "-1rem",
     }}
   />

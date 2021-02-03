@@ -3,18 +3,13 @@ import styles from "./Footer.module.css"
 import Logos from "./Logos"
 import { Container } from "../Containers"
 import { Line } from "../Line"
-import { graphql, StaticQuery } from "gatsby"
 import sanatizeHtml from "sanitize-html"
+import { useContactInfo } from "../../hooks/use-contact-info"
 
-const Top = ({ title, array, content }) => (
-  <div
-    style={{
-      justifyContent: "space-around",
-      display: "flex",
-    }}
-  >
-    <div style={{ maxWidth: "50rem" }}>
-      <h1 className={styles.title}>{title}</h1>
+const Top = ({ address1, address2, email, content, phone }) => (
+  <div className="centered">
+    <div>
+      <h1 className={styles.title}>Bob Worden Esq.</h1>
       <div className={styles.content}>
         <ul
           style={{
@@ -26,12 +21,14 @@ const Top = ({ title, array, content }) => (
             marginTop: "-.15rem",
           }}
         >
-          {array.map(item => (
-            <li key={item}>{item}</li>
-          ))}
+          <li>{address1}</li>
+          <li>{address2}</li>
+          <li>{email}</li>
+          <li>{phone}</li>
         </ul>
         <div className={styles.text}>
           <p
+            style={{ maxWidth: "20rem" }}
             className={styles.topParagraph}
             dangerouslySetInnerHTML={{ __html: sanatizeHtml(content) }}
           />
@@ -52,36 +49,21 @@ const Bottom = () => {
   )
 }
 
-export default () => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <footer>
-        <Container maxWidth="1008px">
-          <Top
-            title={data.wpgraphql.homepage_section.title}
-            array={data.wpgraphql.homepage_section.additional_information.additionalInformation.split(
-              "\n"
-            )}
-            content={data.wpgraphql.homepage_section.content}
-          />
-          <Bottom />
-        </Container>
-      </footer>
-    )}
-  />
-)
+export default () => {
+  const node = useContactInfo()
 
-const query = graphql`
-  {
-    wpgraphql {
-      homepage_section(id: "cG9zdDo1Nw==") {
-        title
-        content
-        additional_information {
-          additionalInformation
-        }
-      }
-    }
-  }
-`
+  return (
+    <footer>
+      <Container maxWidth="1008px">
+        <Top
+          address1={node.contact_information.address}
+          address2={node.contact_information.cityStateZipCode}
+          email={node.contact_information.email}
+          phone={node.contact_information.phoneNumber}
+          content={node.content}
+        />
+        <Bottom />
+      </Container>
+    </footer>
+  )
+}

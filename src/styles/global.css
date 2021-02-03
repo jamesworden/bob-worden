@@ -3,32 +3,33 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--white);
-  font-family: "Lato";
+  font-family: "lato";
   font-weight: normal;
   color: black;
   overflow-x: hidden;
 }
 
 h1 {
-  font-family: "Lora";
+  font-family: "lora";
   font-size: 30px;
   font-weight: 100;
 }
 h2 {
-  font-family: "Lora";
-  font-size: 28px;
+  font-family: "lora";
+  font-size: 30px;
   font-weight: 100;
 }
 h3 {
-  font-family: "Lora";
-  font-size: 18px;
+  font-family: "lora";
+  font-size: 24px;
   font-weight: 100;
 }
 p,
 span,
 li,
-div {
-  font-size: 13px;
+div,
+button {
+  font-size: 14px;
   font-weight: 100;
 }
 @media (min-width: 300px) {
@@ -43,43 +44,42 @@ div {
 }
 @media (min-width: 430px) {
   h1 {
-    font-family: "Lora";
-    font-size: 50px;
+    font-size: 46px;
   }
 }
 @media (min-width: 668px) {
   h1 {
-    font-family: "Lora";
     font-size: 60px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 40px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 28px;
   }
   p,
   span,
   li,
-  div {
-    font-size: 18px;
+  div,
+  button {
+    font-size: 16px;
   }
 }
 @media (min-width: 1008px) {
   h1 {
-    font-family: "Lora";
     font-size: 80px;
   }
   h2 {
-    font-size: 36px;
+    font-size: 46px;
   }
   h3 {
-    font-size: 24px;
+    font-size: 34px;
   }
   p,
   span,
   li,
-  div {
+  div,
+  button {
     font-size: 18px;
   }
 }

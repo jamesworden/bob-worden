@@ -45,10 +45,10 @@
   max-width: 22rem;
   background: linear-gradient(
     to bottom,
-    #ffffff,
-    #ffffff 15%,
-    #dee2e3 15%,
-    #dee2e3 85%
+    var(--white),
+    var(--white) 15%,
+    var(--gray) 15%,
+    var(--gray) 85%
   );
 }
 
@@ -58,10 +58,10 @@
     max-width: 52rem;
     background: linear-gradient(
       to right,
-      #ffffff,
-      #ffffff 15%,
-      #dee2e3 15%,
-      #dee2e3 85%
+      var(--white),
+      var(--white) 15%,
+      var(--gray) 15%,
+      var(--gray) 85%
     );
     min-height: 320px;
   }

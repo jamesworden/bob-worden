@@ -4,7 +4,7 @@ footer {
   bottom: 0;
   width: 100%;
   color: var(--white);
-  background-color: #22222a;
+  background-color: var(--darkgray);
   width: 100%;
   padding-top: 1rem;
 }
@@ -13,6 +13,7 @@ footer {
   color: #808080;
   text-align: center;
   padding-bottom: 1.25rem;
+  max-width: 1008px;
 }
 
 .content {

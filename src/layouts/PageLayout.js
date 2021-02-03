@@ -1,21 +1,21 @@
 import React from "react"
-import { Container, Section } from "../components/Containers"
+import { Section } from "../components/Containers"
 import { Line } from "../components/Line"
 import Layout from "../layouts/Layout"
 
-const PageTitle = ({ children }) => (
-  <Section topPadding>
+const PageTitle = ({ children, bottomPadding }) => (
+  <Section topPadding bottomPadding={bottomPadding}>
     <h1 className="title" style={{ marginBottom: "1rem" }}>
-      {children}
+      {children}.
     </h1>
     <Line partial color="#c4b57a" />
   </Section>
 )
 
-const PageLayout = ({ children, title }) => (
-  <Layout>
-    <PageTitle>{title}</PageTitle>
-    <Container>{children}</Container>
+const PageLayout = ({ children, title, bottomPadding, seoDescription }) => (
+  <Layout seoTitle="title" seoDescription={seoDescription}>
+    <PageTitle bottomPadding={bottomPadding}>{title}</PageTitle>
+    {children}
   </Layout>
 )
 

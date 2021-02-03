@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from "react"
 import styles from "./Resume.module.css"
-import Services from "../Services"
-import TopTen from "../TopTen"
+import Services from "./Services"
+import TopTen from "./TopTen"
 import { SectionLine } from "../../Line"
 
 export default () => {

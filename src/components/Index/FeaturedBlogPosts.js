@@ -1,21 +1,17 @@
 import React from "react"
 import PostCard from "../PostCard"
 import { getFormattedDate } from "../../util/Functions"
-import {
-  AnimationContainer,
-  DiagonalBackground,
-  FeaturedPostContainer,
-} from "../Containers"
+import { AnimationContainer, FeaturedPostContainer } from "../Containers"
 import FeaturedTitle from "./FeaturedTitle"
-import { useFeaturedArticles } from "../../hooks/use-featured-articles"
+import { useFeaturedBlogPosts } from "../../hooks/use-featured-blog-posts"
 
 export default () => {
-  return useFeaturedArticles().length === 0 ? null : (
+  return useFeaturedBlogPosts().length === 0 ? null : (
     <React.Fragment>
-      <FeaturedTitle to="articles">Articles</FeaturedTitle>
-      <DiagonalBackground>
+      <FeaturedTitle to="/blog">Blog Posts</FeaturedTitle>
+      <div style={{ backgroundColor: "var(--lightgold)" }}>
         <FeaturedPostContainer>
-          {useFeaturedArticles().map(node => (
+          {useFeaturedBlogPosts().map(node => (
             <AnimationContainer>
               <PostCard
                 featured
@@ -23,14 +19,14 @@ export default () => {
                 title={node.title}
                 excerpt={node.excerpt}
                 date={getFormattedDate(node.date)}
-                slug={"articles/" + node.slug}
-                external={node.article_information.externalArticle}
-                externalUrl={node.article_information.externalArticleLink}
+                slug={"blog/" + node.slug}
+                external={false}
+                externalUrl={null}
               />
             </AnimationContainer>
           ))}
         </FeaturedPostContainer>
-      </DiagonalBackground>
+      </div>
     </React.Fragment>
   )
 }

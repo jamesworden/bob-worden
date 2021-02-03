@@ -42,6 +42,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
+        google: {
+          families: ["Lora", "Lato"],
+        },
         typekit: {
           id: `nlm1bjb`,
         },
@@ -51,9 +54,10 @@ module.exports = {
       resolve: `gatsby-plugin-page-progress`,
       options: {
         includePaths: [{ regex: "^/blog/" }, { regex: "^/articles/" }],
-        height: 5,
+        height: 3,
         prependToBody: false,
         color: "var(--gold)",
+        footerHeight: 300,
       },
     },
     `gatsby-plugin-react-helmet`,

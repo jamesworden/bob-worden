@@ -1,6 +1,6 @@
 import React from "react"
-import { Line } from "../Line"
-import ArrowLink from "../ArrowLink"
+import { Line } from "../../Line"
+import ArrowLink from "../../ArrowLink"
 
 const TopTen = ({
   backgroundColor,
@@ -8,7 +8,6 @@ const TopTen = ({
   lineColor,
   paddingBottom,
   paddingTop,
-  paddingLeft,
 }) => (
   <div
     style={{
@@ -23,9 +22,9 @@ const TopTen = ({
     }}
   >
     <div style={{ maxWidth: "350px" }}>
-      <h2 style={{ marginTop: 0, marginBottom: 0 }}>
+      <h3 style={{ marginTop: 0, marginBottom: 0 }}>
         A Top Ten Arbitrator in New York State
-      </h2>
+      </h3>
       <Line partial color={lineColor} space />
       <div style={{ width: "80%", marginBottom: "2rem", marginTop: "2rem" }}>
         <p style={{ lineHeight: "2rem" }}>

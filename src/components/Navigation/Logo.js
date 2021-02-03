@@ -11,19 +11,30 @@ const Div = styled.div`
   position: relative;
 `
 
+const H3 = styled.h3`
+  color: ${({ color }) => color};
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: ease 0.3s all;
+  font-size: 18px;
+  @media (min-width: 668px) {
+    font-size: 21px;
+  }
+  @media (min-width: 1008px) {
+    font-size: 24px;
+  }
+
+  &:hover {
+    color: var(--gold);
+    transition: ease 0.3s all;
+  }
+`
+
 export default ({ color }) => {
   return (
     <Div>
       <Link to="/" style={{ textDecoration: "none" }}>
-        <h3
-          style={{
-            textTransform: "uppercase",
-            cursor: "pointer",
-            color,
-          }}
-        >
-          Bob Worden Esq.
-        </h3>
+        <H3 color={color}>Bob Worden Esq.</H3>
       </Link>
     </Div>
   )

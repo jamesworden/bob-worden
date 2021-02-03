@@ -5,10 +5,14 @@ const Category = ({ category, handleClick, selected }) => {
     <span
       key={category}
       onClick={handleClick}
+      onKeyDown={handleClick}
+      role="button"
+      tabIndex={0}
       style={{
         color: selected ? "var(--gold)" : "black",
         marginRight: "1rem",
         cursor: "pointer",
+        outline: "none",
       }}
     >
       {category}.
@@ -17,7 +21,7 @@ const Category = ({ category, handleClick, selected }) => {
 }
 
 export default ({ handleClick, selected, categories }) => (
-  <h2 style={{ margin: "3rem 0rem" }}>
+  <h2 style={{ margin: "1rem 0rem" }}>
     {categories.map(category => (
       <Category
         category={category}

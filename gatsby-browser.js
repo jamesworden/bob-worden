@@ -1,5 +1,4 @@
 import "./src/styles/global.css"
-import "./src/styles/button.css"
 import "./src/styles/containers.css"
 import "./src/styles/variables.css"
 

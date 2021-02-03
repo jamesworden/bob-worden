@@ -16,9 +16,7 @@ export default ({ children, to }) => (
       </div>
     </div>
     <div className="centered" style={{ marginTop: "1.5rem" }}>
-      <ArrowLink to={to}>
-        <span style={{ fontFamily: "Lora" }}>All {children}</span>
-      </ArrowLink>
+      <ArrowLink to={to}>All {children}</ArrowLink>
     </div>
   </Section>
 )
