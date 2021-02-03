@@ -47,7 +47,8 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "repository": {
     "type": "git",

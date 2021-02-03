@@ -60,6 +60,12 @@ module.exports = {
         footerHeight: 300,
       },
     },
+    {
+      resolve: `webpack-filter-warnings-plugin`,
+      options: {
+        exclude: "/mini-css-extract-plugin[^]*Conflicting order between:/",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

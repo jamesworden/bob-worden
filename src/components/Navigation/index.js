@@ -26,8 +26,6 @@ export default ({ home }) => {
   const [open, setOpen] = useState(false)
   let color = home ? "var(--white)" : "black"
 
-  if (!open) document.body.style.overflow = "hidden"
-
   const handleClick = () => {
     setOpen(!open)
 
@@ -45,6 +43,11 @@ export default ({ home }) => {
       disableScroll.on()
     }
   }, [])
+
+  if (width > 800) {
+    setOpen(false)
+    disableScroll.off()
+  }
 
   return (
     <Container zIndex={10} position="absolute">
