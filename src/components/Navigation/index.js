@@ -1,9 +1,10 @@
-import React, { useState, useLayoutEffect, useEffect } from "react"
-import { Container } from "../Containers"
-import styled from "styled-components"
-import Logo from "./Logo"
+import React, { useEffect, useLayoutEffect, useState } from "react"
+
 import Burger from "./Burger"
+import Container from "../Containers/Container"
+import Logo from "./Logo"
 import disableScroll from "disable-scroll"
+import styled from "styled-components"
 
 const Nav = styled.nav`
   width: 100%;
@@ -28,7 +29,6 @@ export default ({ home }) => {
 
   const handleClick = () => {
     setOpen(!open)
-
     if (open) {
       disableScroll.off()
     } else {
@@ -44,16 +44,23 @@ export default ({ home }) => {
     }
   }, [])
 
-  if (width > 800) {
+  const close = () => {
     setOpen(false)
     disableScroll.off()
   }
+
+  if (width > 800) close()
 
   return (
     <Container zIndex={10} position="absolute">
       <Nav>
         <Logo color={open && width < 800 ? "black" : color} />
-        <Burger color={color} handleClick={handleClick} open={open} />
+        <Burger
+          color={color}
+          close={close}
+          handleClick={handleClick}
+          open={open}
+        />
       </Nav>
     </Container>
   )

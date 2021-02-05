@@ -13,8 +13,7 @@ const StyledButton = styled.button`
   z-index: 10;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: bolder;
+  letter-spacing: 0.3em;
   border: 1px solid transparent;
   transition: ease-in-out 0.3s;
   min-width: 15rem;

@@ -1,13 +1,14 @@
-import React from "react"
-import { getFormattedDate } from "../../util/Functions"
-import { navigate } from "gatsby"
-import { useFeaturedBlogPosts } from "../../hooks/use-featured-blog-posts"
 import {
   CardContainer,
   FeaturedContainer,
   FeaturedContainerTitle,
 } from "./FeaturedContainers"
-import { Line } from "../Line"
+
+import Line from "../Line"
+import React from "react"
+import { getFormattedDate } from "../../util/Functions"
+import { navigate } from "gatsby"
+import { useFeaturedBlogPosts } from "../../hooks/use-featured-blog-posts"
 
 export default () => {
   const handleClick = node => navigate("/blog/" + node.slug)

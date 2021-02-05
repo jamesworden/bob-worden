@@ -1,7 +1,7 @@
-import React from "react"
-import { Section } from "../Containers"
 import ArrowLink from "../ArrowLink"
-import { Line } from "../Line"
+import Line from "../Line"
+import React from "react"
+import Section from "../Containers/Section"
 
 export default ({ children, to }) => (
   <Section bottomPadding topPadding>

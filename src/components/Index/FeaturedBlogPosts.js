@@ -1,15 +1,16 @@
-import React from "react"
-import PostCard from "../PostCard"
-import { getFormattedDate } from "../../util/Functions"
-import { AnimationContainer, FeaturedPostContainer } from "../Containers"
+import AnimationContainer from "../Containers/AnimationContainer"
+import FeaturedPostContainer from "../Containers/FeaturedPostContainer"
 import FeaturedTitle from "./FeaturedTitle"
+import PostCard from "../PostCard"
+import React from "react"
+import { getFormattedDate } from "../../util/Functions"
 import { useFeaturedBlogPosts } from "../../hooks/use-featured-blog-posts"
 
 export default () => {
   return useFeaturedBlogPosts().length === 0 ? null : (
     <React.Fragment>
       <FeaturedTitle to="/blog">Blog Posts</FeaturedTitle>
-      <div style={{ backgroundColor: "var(--lightgold)" }}>
+      <section style={{ backgroundColor: "var(--lightgold)" }}>
         <FeaturedPostContainer>
           {useFeaturedBlogPosts().map(node => (
             <AnimationContainer>
@@ -26,7 +27,7 @@ export default () => {
             </AnimationContainer>
           ))}
         </FeaturedPostContainer>
-      </div>
+      </section>
     </React.Fragment>
   )
 }

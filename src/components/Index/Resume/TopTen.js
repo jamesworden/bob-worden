@@ -1,6 +1,6 @@
-import React from "react"
-import { Line } from "../../Line"
 import ArrowLink from "../../ArrowLink"
+import Line from "../../Line"
+import React from "react"
 
 const TopTen = ({
   backgroundColor,
@@ -13,12 +13,12 @@ const TopTen = ({
     style={{
       backgroundColor,
       color,
-      display: "flex",
-      justifyContent: "center",
       paddingBottom,
       paddingTop,
       paddingLeft: "1rem",
       paddingRight: "1rem",
+      display: "flex",
+      justifyContent: "center",
     }}
   >
     <div style={{ maxWidth: "350px" }}>

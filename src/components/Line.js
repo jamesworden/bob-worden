@@ -1,7 +1,6 @@
 import React from "react"
-import { Container } from "./Containers"
 
-const Line = ({ color = "black", partial, space, half }) => (
+export default ({ color = "black", partial, space, half }) => (
   <hr
     style={{
       float: "left",
@@ -16,20 +15,3 @@ const Line = ({ color = "black", partial, space, half }) => (
     }}
   />
 )
-
-const SectionLine = () => (
-  <Container>
-    <div
-      style={{
-        width: "100%",
-        height: "1rem",
-        marginTop: "2.5rem",
-        minWidth: "1096px",
-      }}
-    >
-      <Line color="var(--gold)" />
-    </div>
-  </Container>
-)
-
-export { Line, SectionLine }

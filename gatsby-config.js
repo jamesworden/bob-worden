@@ -40,13 +40,19 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        google: {
-          families: ["Lora", "Lato"],
-        },
-        typekit: {
-          id: `nlm1bjb`,
+        fonts: {
+          google: [
+            {
+              family: "Lato",
+              variants: ["300", "300i", "400", "700"],
+            },
+            {
+              family: "Lora",
+              variants: ["300", "300i", "400", "700"],
+            },
+          ],
         },
       },
     },
@@ -61,9 +67,15 @@ module.exports = {
       },
     },
     {
-      resolve: `webpack-filter-warnings-plugin`,
+      resolve: `gatsby-plugin-html-attributes`,
       options: {
-        exclude: "/mini-css-extract-plugin[^]*Conflicting order between:/",
+        lang: `en`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -72,5 +84,7 @@ module.exports = {
     `gatsby-plugin-preact`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
   ],
 }

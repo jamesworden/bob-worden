@@ -1,12 +1,12 @@
-import React from "react"
 import Layout from "./Layout"
-import { graphql } from "gatsby"
-import { Section } from "../components/Containers"
-import styled from "styled-components"
+import Line from "../components/Line"
 import { Link } from "gatsby"
+import React from "react"
+import Section from "../components/Containers/Section"
 import { getFormattedDate } from "../util/Functions"
-import sanitizeHtml from "sanitize-html"
-import { Line } from "../components/Line"
+import { graphql } from "gatsby"
+import sanitize from "sanitize-html"
+import styled from "styled-components"
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -29,6 +29,7 @@ const StyledArticle = styled.div`
 
   @media (min-width: 668px) {
     padding: 2rem;
+    margin-bottom: 2rem;
   }
 `
 
@@ -62,7 +63,7 @@ const ArticleLayout = ({ data }) => (
     seoDescription={data.wpgraphql.article.excerpt}
   >
     <StyledBackground>
-      <Section topPadding maxWidth="50rem">
+      <Section noBottomPadding maxWidth="50rem">
         <StyledArticle>
           <header style={{ paddingBottom: "2rem" }}>
             <StyledTitle>{data.wpgraphql.article.title}</StyledTitle>
@@ -75,12 +76,12 @@ const ArticleLayout = ({ data }) => (
           <Line color="var(--lightgold)" space />
           <Excerpt
             dangerouslySetInnerHTML={{
-              __html: sanitizeHtml(data.wpgraphql.article.excerpt),
+              __html: sanitize(data.wpgraphql.article.excerpt),
             }}
           />
           <p
             dangerouslySetInnerHTML={{
-              __html: sanitizeHtml(data.wpgraphql.article.content),
+              __html: sanitize(data.wpgraphql.article.content),
             }}
           />
         </StyledArticle>

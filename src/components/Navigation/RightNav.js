@@ -1,5 +1,5 @@
-import React from "react"
 import NavLinks from "./NavLinks"
+import React from "react"
 import styled from "styled-components"
 
 const Div = styled.div`
@@ -41,11 +41,11 @@ const List = styled.ul`
   }
 `
 
-export default ({ color, open }) => {
+export default ({ color, open, close }) => {
   return (
     <Div open={open}>
       <List>
-        <NavLinks color={color} />
+        <NavLinks color={color} close={close} />
       </List>
     </Div>
   )

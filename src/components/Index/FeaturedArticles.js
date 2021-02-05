@@ -1,19 +1,17 @@
-import React from "react"
-import PostCard from "../PostCard"
-import { getFormattedDate } from "../../util/Functions"
-import {
-  AnimationContainer,
-  DiagonalBackground,
-  FeaturedPostContainer,
-} from "../Containers"
+import AnimationContainer from "../Containers/AnimationContainer"
+import DiagonalContainer from "../Containers/DiagonalContainer"
+import FeaturedPostContainer from "../Containers/FeaturedPostContainer"
 import FeaturedTitle from "./FeaturedTitle"
+import PostCard from "../PostCard"
+import React from "react"
+import { getFormattedDate } from "../../util/Functions"
 import { useFeaturedArticles } from "../../hooks/use-featured-articles"
 
 export default () => {
   return useFeaturedArticles().length === 0 ? null : (
     <React.Fragment>
       <FeaturedTitle to="articles">Articles</FeaturedTitle>
-      <DiagonalBackground>
+      <DiagonalContainer>
         <FeaturedPostContainer>
           {useFeaturedArticles().map(node => (
             <AnimationContainer>
@@ -30,7 +28,7 @@ export default () => {
             </AnimationContainer>
           ))}
         </FeaturedPostContainer>
-      </DiagonalBackground>
+      </DiagonalContainer>
     </React.Fragment>
   )
 }

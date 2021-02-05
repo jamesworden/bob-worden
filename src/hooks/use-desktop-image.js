@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useDesktopImage = () => {
   return useStaticQuery(

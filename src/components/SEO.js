@@ -1,16 +1,14 @@
-import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+
 import { Helmet } from "react-helmet"
+import React from "react"
 
 const SEO = ({ title, description }) => (
   <StaticQuery
     query={query}
     render={({
       site: {
-        siteMetadata: {
-          defaultTitle,
-          defaultDescription,
-        },
+        siteMetadata: { defaultTitle, defaultDescription },
       },
     }) => {
       const seo = {

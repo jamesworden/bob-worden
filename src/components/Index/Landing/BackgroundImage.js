@@ -1,9 +1,9 @@
+import GatsbyBackgroundImage from "gatsby-background-image"
 import React from "react"
 import { useDesktopImage } from "../../../hooks/use-desktop-image"
 import { useMobileImage } from "../../../hooks/use-mobile-image"
-import GatsbyBackgroundImage from "gatsby-background-image"
 
-const BackgroundImage = ({ children, className }) => {
+const BackgroundImage = ({ children }) => {
   const { desktopImage } = useDesktopImage()
   const { mobileImage } = useMobileImage()
 
@@ -20,7 +20,6 @@ const BackgroundImage = ({ children, className }) => {
       Tag="section"
       fluid={sources}
       backgroundColor={`#040e18`}
-      className={className}
     >
       {children}
     </GatsbyBackgroundImage>

@@ -1,7 +1,7 @@
-import React from "react"
 import Footer from "../components/Footer"
-import SEO from "../components/SEO"
 import Navigation from "../components/Navigation"
+import React from "react"
+import SEO from "../components/SEO"
 
 const Layout = ({ children, seoTitle, seoDescription, home }) => {
   return (

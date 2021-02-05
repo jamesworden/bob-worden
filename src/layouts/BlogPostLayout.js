@@ -1,11 +1,11 @@
-import React from "react"
 import Layout from "./Layout"
-import { graphql } from "gatsby"
-import { Section } from "../components/Containers"
-import styled from "styled-components"
 import { Link } from "gatsby"
+import React from "react"
+import Section from "../components/Containers/Section"
 import { getFormattedDate } from "../util/Functions"
-import sanitizeHtml from "sanitize-html"
+import { graphql } from "gatsby"
+import sanitize from "sanitize-html"
+import styled from "styled-components"
 
 const StyledTitle = styled.h2`
   text-align: left;
@@ -24,18 +24,6 @@ const StyledLink = styled(Link)`
   }
 `
 
-// const StyledUrl = styled.a`
-//   text-decoration: none;
-//   transition: all ease 0.3s;
-//   cursor: pointer;
-//   color: black;
-
-//   &:hover {
-//     transition: all ease 0.3s;
-//     color: var(--gold);
-//   }
-// `
-
 const Excerpt = styled.p`
   padding-top: 1rem;
   * {
@@ -52,7 +40,7 @@ const BlogPostLayout = ({ data }) => (
     seoTitle={data.wpgraphql.post.title}
     seoDescription={data.wpgraphql.post.excerpt}
   >
-    <Section topPadding backgroundColor="var(--gray)" maxWidth="50rem">
+    <Section noBottomPadding backgroundColor="var(--gray)" maxWidth="50rem">
       <header style={{ paddingBottom: "4rem" }}>
         <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
         <div>
@@ -62,15 +50,15 @@ const BlogPostLayout = ({ data }) => (
         </div>
       </header>
     </Section>
-    <Section maxWidth="50rem">
+    <Section noBottomPadding noTopPadding maxWidth="50rem">
       <Excerpt
         dangerouslySetInnerHTML={{
-          __html: sanitizeHtml(data.wpgraphql.post.excerpt),
+          __html: sanitize(data.wpgraphql.post.excerpt),
         }}
       />
       <Body
         dangerouslySetInnerHTML={{
-          __html: sanitizeHtml(data.wpgraphql.post.content),
+          __html: sanitize(data.wpgraphql.post.content),
         }}
       />
     </Section>

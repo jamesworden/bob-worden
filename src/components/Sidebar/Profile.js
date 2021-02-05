@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Circle } from "../Headshot"
-import sanatizeHtml from "sanitize-html"
 import ArrowLink from "../ArrowLink"
+import { Circle } from "../Headshot"
+import React from "react"
+import sanitize from "sanitize-html"
+import styled from "styled-components"
 import { useDescription } from "../../hooks/use-description"
 
 const ProfileContainer = styled.div`
@@ -11,7 +11,6 @@ const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 22.5rem;
   padding-bottom: 4rem;
 `
 
@@ -21,6 +20,7 @@ const StyledContent = styled.div`
   * {
     font-size: 14px;
     flex-wrap: wrap;
+    max-width: 22.5rem;
   }
 `
 
@@ -29,6 +29,7 @@ const StyledSpan = styled.span`
   font-family: "Lato" sans-serif;
   font-weight: bolder;
   font-size: 16px;
+  max-width: 22.5rem;
 `
 
 // Title
@@ -36,6 +37,7 @@ const StyledH3 = styled.h3`
   margin-bottom: 0;
   font-size: 24;
   text-align: center;
+  max-width: 22.5rem;
 `
 
 export default () => (
@@ -46,7 +48,7 @@ export default () => (
     <StyledH3>Bob Worden Esq.</StyledH3>
     <StyledContent
       dangerouslySetInnerHTML={{
-        __html: sanatizeHtml(useDescription()),
+        __html: sanitize(useDescription()),
       }}
       style={{ fontSize: 18 }}
     />

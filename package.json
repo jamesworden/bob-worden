@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "bob-worden-esq",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Nationally known mediator and arbitrator respected by plaintiffs, defendants, and insurance carriers.",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -11,48 +11,51 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
-    "apollo-link-http": "^1.5.16",
     "babel-plugin-styled-components": "^1.12.0",
     "disable-scroll": "^0.6.0",
-    "gatsby": "^2.31.1",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-background-image": "^1.4.0",
     "gatsby-image": "^2.10.0",
+    "gatsby-plugin-html-attributes": "^1.0.5",
+    "gatsby-plugin-netlify": "^2.11.0",
     "gatsby-plugin-page-progress": "^2.1.1",
     "gatsby-plugin-preact": "^4.6.0",
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^2.13.2",
     "gatsby-plugin-smoothscroll": "^1.2.0",
-    "gatsby-plugin-styled-components": "^3.7.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-plugin-styled-components": "^3.10.0",
+    "gatsby-plugin-webfonts": "^1.1.4",
     "gatsby-source-filesystem": "^2.8.0",
     "gatsby-source-graphql": "^2.11.0",
     "gatsby-transformer-remark": "^2.13.1",
     "gatsby-transformer-sharp": "^2.11.0",
-    "innertext": "^1.0.3",
     "intersection-observer": "^0.12.0",
     "preact": "^10.5.12",
-    "python": "0.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "react-spring": "^8.0.27",
+    "react-hook-form": "^6.15.1",
     "react-textarea-autosize": "^8.3.0",
     "sanitize-html": "^2.3.1",
     "sharp": "^0.27.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^0.12.0",
+    "cypress": "^6.4.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.20",
+    "identity-obj-proxy": "^3.0.0",
     "prettier": "2.2.1",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "react-test-renderer": "^17.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/jamesworden/bob-worden"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

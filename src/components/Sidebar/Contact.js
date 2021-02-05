@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
+
 import Button from "../Button"
-import { Section } from "../Containers"
+import React from "react"
+import Section from "../Containers/Section"
 
 // This is the same data as the call to action
 export default () => {

@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import RightNav from "./RightNav"
+import styled from "styled-components"
 
 const Div = styled.div`
   margin: 0;
@@ -40,7 +40,7 @@ const StyledBurger = styled.div`
   }
 `
 
-export default ({ color, open, handleClick }) => {
+export default ({ color, open, handleClick, close }) => {
   return (
     <React.Fragment>
       <Div>
@@ -50,7 +50,7 @@ export default ({ color, open, handleClick }) => {
           <div />
         </StyledBurger>
       </Div>
-      <RightNav color={color} open={open} />
+      <RightNav color={color} open={open} close={close} />
     </React.Fragment>
   )
 }

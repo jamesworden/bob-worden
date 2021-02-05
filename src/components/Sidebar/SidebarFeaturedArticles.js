@@ -1,15 +1,16 @@
-import React from "react"
-import { getFormattedDate } from "../../util/Functions"
-import { useFeaturedArticles } from "../../hooks/use-featured-articles"
-import { navigate } from "gatsby"
 import {
   CardContainer,
   FeaturedContainer,
   FeaturedContainerTitle,
 } from "./FeaturedContainers"
-import { Line } from "../Line"
 
-export default node => {
+import Line from "../Line"
+import React from "react"
+import { getFormattedDate } from "../../util/Functions"
+import { navigate } from "gatsby"
+import { useFeaturedArticles } from "../../hooks/use-featured-articles"
+
+export default () => {
   function handleClick(node) {
     node.article_information.externalArticle
       ? window.open(node.article_information.externalArticleLink, "_self")

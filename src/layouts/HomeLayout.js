@@ -1,13 +1,13 @@
-import React from "react"
-import { useDescription } from "../hooks/use-description"
 import Layout from "../layouts/Layout"
-import sanitizeHtml from "sanitize-html"
+import React from "react"
+import sanitize from "sanitize-html"
+import { useDescription } from "../hooks/use-description"
 
 export default ({ children }) => {
   return (
     <Layout
       seoTitle="Bob Worden Esq."
-      seoDescription={sanitizeHtml(useDescription()).innerHTML}
+      seoDescription={sanitize(useDescription()).innerHTML}
       home
     >
       {children}

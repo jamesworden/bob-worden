@@ -1,11 +1,11 @@
-import { navigate } from "gatsby"
-import React from "react"
 import ArrowLink from "./ArrowLink"
-import { Line } from "./Line"
-import sanatizeHtml from "sanitize-html"
+import Line from "./Line"
+import React from "react"
+import { navigate } from "gatsby"
+import sanitize from "sanitize-html"
 import styled from "styled-components"
 
-const Title = styled.h3`
+const Title = styled.h1`
   font-size: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -21,8 +21,8 @@ const Date = styled.span`
   margin: 0;
 `
 
-const Excerpt = styled.p`
-  padding-bottom: 1rem;
+const Excerpt = styled.div`
+  padding-bottom: 2rem;
 
   * {
     font-size: 13px;
@@ -47,7 +47,6 @@ const PostContainer = styled.div`
   cursor: pointer;
   transition: ease-in-out 0.3s;
   max-width: 40rem;
-  min-height: 10rem;
   background-color: var(--white);
   outline: none;
   box-shadow: ${({ featured }) =>
@@ -85,12 +84,15 @@ export default ({
       tabIndex={0}
     >
       <Date>{date}</Date>
-      <Title>{title}</Title>
-      <Excerpt dangerouslySetInnerHTML={{ __html: sanatizeHtml(excerpt) }} />
-      <ArrowLink>
-        <ArrowText>Read More</ArrowText>
-      </ArrowLink>
-      {!featured ? <Line color="var(--gray)" space /> : null}
+      <section>
+        {/* Section is here for Accessibiity. Title should be at the top */}
+        <Title>{title}</Title>
+        <Excerpt dangerouslySetInnerHTML={{ __html: sanitize(excerpt) }} />
+        <ArrowLink>
+          <ArrowText>Read More</ArrowText>
+        </ArrowLink>
+        {!featured ? <Line color="var(--gray)" space /> : null}
+      </section>
     </PostContainer>
   )
 }

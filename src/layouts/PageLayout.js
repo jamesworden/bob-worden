@@ -1,10 +1,10 @@
-import React from "react"
-import { Section } from "../components/Containers"
-import { Line } from "../components/Line"
 import Layout from "../layouts/Layout"
+import Line from "../components/Line"
+import React from "react"
+import Section from "../components/Containers/Section"
 
 const PageTitle = ({ children, bottomPadding }) => (
-  <Section topPadding bottomPadding={bottomPadding}>
+  <Section noBottomPadding bottomPadding={bottomPadding}>
     <h1 className="title" style={{ marginBottom: "1rem" }}>
       {children}.
     </h1>

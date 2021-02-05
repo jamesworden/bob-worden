@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
+
+import ListContainer from "../Containers/ListContainer"
 import React from "react"
-import { Section, ListContainer } from "../Containers"
+import Section from "../Containers/Section"
 
 export default () => {
   const data = useStaticQuery(graphql`

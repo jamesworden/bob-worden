@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 // This is the same content as the first paragraph of the landing page
 export const useDescription = () => {

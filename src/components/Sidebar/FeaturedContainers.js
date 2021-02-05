@@ -1,6 +1,6 @@
+import ArrowLink from "../ArrowLink"
 import React from "react"
 import styled from "styled-components"
-import ArrowLink from "../ArrowLink"
 
 const StyledCardBar = styled.div`
   min-width: 0.25rem;
@@ -67,7 +67,7 @@ const FeaturedContainerTitle = styled.h2`
   font-size: 32px;
 `
 
-const CardContainer = ({ date, title, handleClick }) => (
+const CardContainer = ({ date, title }) => (
   <StyledCardContainer>
     <StyledCardBar />
     <StyledCardContent>

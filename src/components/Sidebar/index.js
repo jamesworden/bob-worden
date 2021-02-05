@@ -1,9 +1,9 @@
-import React from "react"
-import Profile from "./Profile"
-import SidebarFeaturedArticles from "./SidebarFeaturedArticles"
-import styled from "styled-components"
 import CallToAction from "./CallToAction"
+import Profile from "./Profile"
+import React from "react"
+import SidebarFeaturedArticles from "./SidebarFeaturedArticles"
 import SidebarFeaturedBlogPosts from "./SidebarFeaturedBlogPosts"
+import styled from "styled-components"
 
 // Container takes up entire width
 const SidebarContainer = styled.div`
@@ -18,7 +18,7 @@ const SidebarContainer = styled.div`
 // This is the content that is centered above
 const SidebarContent = styled.div`
   display: inline-block;
-  max-width: 23rem;
+  max-width: 22.5rem;
 `
 
 export default ({ articles, blog }) => {

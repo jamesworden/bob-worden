@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useHeadshotImage = () => {
   return useStaticQuery(
@@ -6,7 +6,7 @@ export const useHeadshotImage = () => {
       {
         headshotImage: file(relativePath: { eq: "images/headshot.jpg" }) {
           childImageSharp {
-            fixed {
+            fixed(width: 320, height: 320) {
               base64
               width
               height

@@ -1,5 +1,5 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 import styled from "styled-components"
 
 const StyledLink = styled(Link)`
@@ -25,9 +25,13 @@ const StyledListItem = styled.li`
   }
 `
 
-export default ({ children, color }) => (
+export default ({ children, color, close }) => (
   <StyledListItem>
-    <StyledLink to={`/${children === "home" ? "" : children}`} color={color}>
+    <StyledLink
+      to={`/${children === "home" ? "" : children}`}
+      color={color}
+      onClick={close}
+    >
       {children}
     </StyledLink>
   </StyledListItem>
