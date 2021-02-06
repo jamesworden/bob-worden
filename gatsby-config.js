@@ -78,6 +78,23 @@ module.exports = {
         devMode: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-humans-txt`,
+      options: {
+        header: "JAMES WORDEN",
+        team: [
+          {
+            Developer: `James Worden`,
+            GitHub: `jamesworden`,
+            LinkedIn: `jameswordenny`,
+          },
+        ],
+        site: {
+          "Last update": `Saturday, February 6, 2021`,
+        },
+        note: `Developed in New York.`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
