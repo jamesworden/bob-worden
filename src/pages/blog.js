@@ -55,7 +55,7 @@ export default ({ data }) => {
       </Container>
       <Container>
         <SidebarContainer>
-          {data.wpgraphql.posts.length === 0 ? (
+          {data.wpgraphql.posts === undefined ? (
             <NoPostsText>blog posts</NoPostsText>
           ) : (
             <Posts selected={selected} data={data} />

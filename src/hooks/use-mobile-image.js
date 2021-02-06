@@ -4,7 +4,7 @@ export const useMobileImage = () => {
   return useStaticQuery(
     graphql`
       {
-        mobileImage: file(relativePath: { eq: "images/landing-desktop.jpg" }) {
+        mobileImage: file(relativePath: { eq: "images/landing-mobile.jpg" }) {
           childImageSharp {
             fluid(quality: 90) {
               ...GatsbyImageSharpFluid
