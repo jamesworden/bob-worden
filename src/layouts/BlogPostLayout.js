@@ -24,14 +24,14 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Excerpt = styled.p`
+const Excerpt = styled.div`
   padding-top: 1rem;
   * {
     font-weight: bold;
   }
 `
 
-const Body = styled.p`
+const Body = styled.div`
   padding: 1rem 0rem;
 `
 
@@ -40,7 +40,7 @@ const BlogPostLayout = ({ data }) => (
     seoTitle={data.wpgraphql.post.title}
     seoDescription={data.wpgraphql.post.excerpt}
   >
-    <Section noBottomPadding backgroundColor="var(--gray)" maxWidth="50rem">
+    <Section noBottomPadding background="var(--gray)" maxWidth="50rem">
       <header style={{ paddingBottom: "4rem" }}>
         <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
         <div>

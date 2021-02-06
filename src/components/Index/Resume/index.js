@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import Container from "../../Containers/Container"
 import Line from "../../Line"
@@ -44,7 +44,7 @@ const SectionLine = () => (
 
 export default () => {
   const [width, setWidth] = useState(0)
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateWidth() {
       setWidth([window.innerWidth])
     }

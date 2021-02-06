@@ -11,7 +11,7 @@ const BackgroundImage = ({ children }) => {
     mobileImage.childImageSharp.fluid,
     {
       ...desktopImage.childImageSharp.fluid,
-      media: `(min-width: 575px)`,
+      media: `(min-width: 668px)`,
     },
   ]
 

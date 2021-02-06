@@ -16,6 +16,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "disable-scroll": "^0.6.0",
+    "gatsby": "^2.32.3",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-background-image": "^1.4.0",
     "gatsby-image": "^2.10.0",
@@ -45,7 +46,6 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "babel-jest": "^26.6.3",
     "babel-preset-gatsby": "^0.12.0",
     "cypress": "^6.4.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.20",

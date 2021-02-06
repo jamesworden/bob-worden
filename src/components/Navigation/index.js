@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import Burger from "./Burger"
 import Container from "../Containers/Container"
@@ -15,7 +15,7 @@ const Nav = styled.nav`
 
 export default ({ home }) => {
   const [width, setWidth] = useState(0)
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateWidth() {
       setWidth([window.innerWidth])
     }

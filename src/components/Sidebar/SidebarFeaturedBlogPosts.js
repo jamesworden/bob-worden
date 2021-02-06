@@ -20,6 +20,7 @@ export default () => {
       <FeaturedContainerTitle>Featured Blog Posts</FeaturedContainerTitle>
       {useFeaturedBlogPosts().map(node => (
         <div
+          key={node.title}
           style={{ outline: "none" }}
           onClick={() => handleClick(node)}
           onKeyDown={() => handleClick(node)}

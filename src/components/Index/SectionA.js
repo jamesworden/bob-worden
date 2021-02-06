@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <div id="scroll">
-      <Section backgroundColor="#3D3C47" topPadding bottomPadding>
+      <Section background="#3D3C47" topPadding bottomPadding>
         <TextContainer
           title={data.wpgraphql.homepage_section.title}
           color="var(--white)"

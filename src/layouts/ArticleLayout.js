@@ -8,18 +8,6 @@ import { graphql } from "gatsby"
 import sanitize from "sanitize-html"
 import styled from "styled-components"
 
-const StyledBackground = styled.div`
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--white),
-    var(--white) 10%,
-    var(--lightgold) 10%,
-    var(--lightgold) 100%
-  );
-`
-
 const StyledArticle = styled.div`
   background-color: var(--white);
   padding: 1rem;
@@ -50,7 +38,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Excerpt = styled.p`
+const Excerpt = styled.div`
   padding-top: 1rem;
   * {
     font-weight: bold;
@@ -62,31 +50,39 @@ const ArticleLayout = ({ data }) => (
     seoTitle={data.wpgraphql.article.title}
     seoDescription={data.wpgraphql.article.excerpt}
   >
-    <StyledBackground>
-      <Section noBottomPadding maxWidth="50rem">
-        <StyledArticle>
-          <header style={{ paddingBottom: "2rem" }}>
-            <StyledTitle>{data.wpgraphql.article.title}</StyledTitle>
-            <div>
-              <StyledLink to="/about">Bob Worden Esq.</StyledLink>
-              <span style={{ margin: "0rem 1rem" }}>|</span>
-              {getFormattedDate(data.wpgraphql.article.date)}
-            </div>
-          </header>
-          <Line color="var(--lightgold)" space />
-          <Excerpt
-            dangerouslySetInnerHTML={{
-              __html: sanitize(data.wpgraphql.article.excerpt),
-            }}
-          />
-          <p
-            dangerouslySetInnerHTML={{
-              __html: sanitize(data.wpgraphql.article.content),
-            }}
-          />
-        </StyledArticle>
-      </Section>
-    </StyledBackground>
+    <Section
+      noBottomPadding
+      maxWidth="50rem"
+      background="linear-gradient(
+    to bottom,
+    var(--white),
+    var(--white) 10%,
+    var(--lightgold) 10%,
+    var(--lightgold) 100%
+  )"
+    >
+      <StyledArticle>
+        <header style={{ paddingBottom: "2rem" }}>
+          <StyledTitle>{data.wpgraphql.article.title}</StyledTitle>
+          <div>
+            <StyledLink to="/about">Bob Worden Esq.</StyledLink>
+            <span style={{ margin: "0rem 1rem" }}>|</span>
+            {getFormattedDate(data.wpgraphql.article.date)}
+          </div>
+        </header>
+        <Line color="var(--lightgold)" space />
+        <Excerpt
+          dangerouslySetInnerHTML={{
+            __html: sanitize(data.wpgraphql.article.excerpt),
+          }}
+        />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: sanitize(data.wpgraphql.article.content),
+          }}
+        />
+      </StyledArticle>
+    </Section>
   </Layout>
 )
 

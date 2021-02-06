@@ -15,7 +15,7 @@ const StyledSection = styled.section`
 
 export default ({
   children,
-  backgroundColor = "var(--white);",
+  background = "var(--white)",
   maxWidth = "1096px",
   textAlign = "left",
   color = "black",
@@ -25,7 +25,7 @@ export default ({
   <StyledSection
     style={{
       color,
-      backgroundColor,
+      background,
       textAlign,
       paddingTop: noTopPadding ? 0 : "",
       paddingBottom: noBottomPadding ? 0 : "",

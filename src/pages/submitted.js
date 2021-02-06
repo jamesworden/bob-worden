@@ -26,12 +26,12 @@ export default ({ data }) => (
         <h3 style={{ margin: 0, padding: 0 }}>
           {data.wpgraphql.submission_section.title}
         </h3>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: sanitize(data.wpgraphql.submission_section.content),
-          }}
-        />
-        <p style={{ paddingTop: "4rem" }}>
+        <p style={{ paddingBottom: "3rem" }}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: sanitize(data.wpgraphql.submission_section.content),
+            }}
+          />
           Click <StyledLink to="/">here</StyledLink> to return to the homepage.
         </p>
       </Container>

@@ -6,14 +6,8 @@ export const useDesktopImage = () => {
       {
         desktopImage: file(relativePath: { eq: "images/landing-desktop.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
+            fluid(quality: 90) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

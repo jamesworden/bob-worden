@@ -1,6 +1,7 @@
 import Button from "./Button"
 import React from "react"
 import TextareaAutosize from "react-textarea-autosize"
+import { navigate } from "gatsby"
 import styled from "styled-components"
 import { useForm } from "react-hook-form"
 
@@ -62,16 +63,25 @@ const Asterisk = () => <span style={{ color: "var(--red)" }}>*</span>
 
 export default () => {
   const { register, handleSubmit, errors } = useForm()
-
   const onSubmit = data => {
-    fetch(
-      "https://www.flexyform.com/f/8a919fb1644387c261422e429fba3face1339927",
-      {
-        method: "POST",
-        body: data,
-        mode: "no-cors",
-      }
-    )
+    try {
+      fetch(
+        "https://act4822wla.execute-api.us-east-1.amazonaws.com/Production",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "no-cache",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      ).then(() => {
+        navigate("/submitted")
+      })
+    } catch (error) {
+      // handle server errors
+    }
   }
 
   return (
