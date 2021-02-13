@@ -43,7 +43,7 @@ const ArrowText = styled.span`
 `
 
 const PostContainer = styled.div`
-  margin: 1rem 0rem;
+  margin: ${({ native }) => (native ? "3rem 0rem" : "1rem 0rem")};
   cursor: pointer;
   transition: ease-in-out 0.3s;
   max-width: 40rem;
@@ -61,6 +61,9 @@ const PostContainer = styled.div`
   }
 `
 
+// native - The post is native the 'Articles' or 'Conact' page itself.
+// native - as opposed to being rendered on the home page.
+
 export default ({
   title,
   date,
@@ -69,6 +72,7 @@ export default ({
   externalUrl,
   external,
   featured,
+  native,
 }) => {
   const handleClick = () => {
     external ? window.open(externalUrl, "_self") : navigate("/" + slug)
@@ -76,6 +80,7 @@ export default ({
 
   return (
     <PostContainer
+      native={native}
       featured={featured}
       date={date}
       onClick={handleClick}

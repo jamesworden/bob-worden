@@ -28,6 +28,7 @@ const Posts = ({ selected, data }) => (
           slug={"blog/" + node.slug}
           external={false}
           externalUrl={null}
+          native={true}
         />
       ))}
   </PostContainer>

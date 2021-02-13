@@ -32,6 +32,7 @@ const Posts = ({ selected, data }) => (
               ? node.article_information.externalArticleLink
               : null
           }
+          native={true}
         />
       ))}
   </PostContainer>

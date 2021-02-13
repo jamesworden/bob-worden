@@ -47,7 +47,7 @@ const Services = ({ paddingBottom, paddingRight }) => (
       <ServiceLine />
       <Service
         title="Firm Member"
-        subtitle="Lawrence Worden Ranis & Bard P.C."
+        subtitle="Lawrence Worden Rainis & Bard P.C."
         url="http://www.lwrlawyer.com/attorney/robert-p-worden-jr/"
       />
     </Section>

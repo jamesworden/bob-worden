@@ -15,7 +15,6 @@ body {
   background-color: var(--white);
   font-family: "lato";
   font-weight: normal;
-  overflow-x: hidden;
 }
 
 h1 {

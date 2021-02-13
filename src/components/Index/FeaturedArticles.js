@@ -14,16 +14,16 @@ export default () => {
       <DiagonalContainer>
         <FeaturedPostContainer>
           {useFeaturedArticles().map(node => (
-            <AnimationContainer>
+            <AnimationContainer key={node.title}>
               <PostCard
                 featured
-                key={node.title}
                 title={node.title}
                 excerpt={node.excerpt}
                 date={getFormattedDate(node.date)}
                 slug={"articles/" + node.slug}
                 external={node.article_information.externalArticle}
                 externalUrl={node.article_information.externalArticleLink}
+                native={false}
               />
             </AnimationContainer>
           ))}

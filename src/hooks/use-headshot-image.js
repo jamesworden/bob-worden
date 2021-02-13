@@ -6,7 +6,7 @@ export const useHeadshotImage = () => {
       {
         headshotImage: file(relativePath: { eq: "images/headshot.jpg" }) {
           childImageSharp {
-            fixed(width: 320, height: 320) {
+            fixed(width: 300, height: 300) {
               base64
               width
               height

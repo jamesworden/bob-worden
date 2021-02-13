@@ -117,7 +117,7 @@ export default () => {
                 }}
               />
             </Grid>
-            <Button to="contact">Contact Bob</Button>
+            <Button to="/contact">Contact Bob</Button>
           </Container>
         </div>
         <ScrollDown />

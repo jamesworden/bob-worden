@@ -13,16 +13,16 @@ export default () => {
       <section style={{ backgroundColor: "var(--lightgold)" }}>
         <FeaturedPostContainer>
           {useFeaturedBlogPosts().map(node => (
-            <AnimationContainer>
+            <AnimationContainer key={node.title}>
               <PostCard
                 featured
-                key={node.title}
                 title={node.title}
                 excerpt={node.excerpt}
                 date={getFormattedDate(node.date)}
                 slug={"blog/" + node.slug}
                 external={false}
                 externalUrl={null}
+                native={false}
               />
             </AnimationContainer>
           ))}

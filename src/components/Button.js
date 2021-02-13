@@ -27,7 +27,9 @@ const StyledButton = styled.button`
 `
 
 const Button = ({ children, to }) => (
-  <StyledButton onClick={() => navigate(to)}>{children}</StyledButton>
+  <StyledButton onClick={() => navigate(to)} key={to}>
+    {children}
+  </StyledButton>
 )
 
 export default Button
