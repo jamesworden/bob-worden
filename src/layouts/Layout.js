@@ -6,11 +6,7 @@ import SEO from "../components/SEO"
 
 const Layout = ({ children, seoTitle, seoDescription, home }) => {
   useEffect(() => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    })
+    setTimeout(window.scrollTo(0, 0), 10)
   }, [])
 
   return (
