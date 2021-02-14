@@ -7,13 +7,14 @@ const FeaturedPostContent = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 20rem;
+  width: 100%;
+  margin: auto;
+  max-width: 40rem;
 `
 
 // These are used for Featured Articles and Featured Posts
 export default ({ children }) => (
   <Container>
-    <div className="centered">
-      <FeaturedPostContent>{children}</FeaturedPostContent>
-    </div>
+    <FeaturedPostContent>{children}</FeaturedPostContent>
   </Container>
 )

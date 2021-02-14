@@ -25,7 +25,7 @@ const Excerpt = styled.div`
   padding-bottom: 2rem;
 
   * {
-    font-size: 13px;
+    font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -46,7 +46,6 @@ const PostContainer = styled.div`
   margin: ${({ native }) => (native ? "3rem 0rem" : "1rem 0rem")};
   cursor: pointer;
   transition: ease-in-out 0.3s;
-  max-width: 40rem;
   background-color: var(--white);
   outline: none;
   box-shadow: ${({ featured }) =>

@@ -7,9 +7,11 @@ import { graphql } from "gatsby"
 import sanitize from "sanitize-html"
 import styled from "styled-components"
 
-const StyledTitle = styled.h2`
+const blogPostWidth = "50rem"
+
+const StyledTitle = styled.h1`
   text-align: left;
-  max-width: 50rem;
+  max-width: ${blogPostWidth};
 `
 
 const StyledLink = styled(Link)`
@@ -25,45 +27,59 @@ const StyledLink = styled(Link)`
 `
 
 const Excerpt = styled.div`
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   * {
     font-weight: bold;
   }
 `
 
 const Body = styled.div`
-  padding: 1rem 0rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 `
 
-const BlogPostLayout = ({ data }) => (
-  <Layout
-    seoTitle={data.wpgraphql.post.title}
-    seoDescription={data.wpgraphql.post.excerpt}
-  >
-    <Section noBottomPadding background="var(--gray)" maxWidth="50rem">
-      <header style={{ paddingBottom: "4rem" }}>
-        <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
-        <div>
-          <StyledLink to="/about">Bob Worden Esq.</StyledLink>
-          <span style={{ margin: "0rem 1rem" }}>|</span>
-          {getFormattedDate(data.wpgraphql.post.date)}
-        </div>
-      </header>
-    </Section>
-    <Section noBottomPadding noTopPadding maxWidth="50rem">
-      <Excerpt
-        dangerouslySetInnerHTML={{
-          __html: sanitize(data.wpgraphql.post.excerpt),
-        }}
-      />
-      <Body
-        dangerouslySetInnerHTML={{
-          __html: sanitize(data.wpgraphql.post.content),
-        }}
-      />
-    </Section>
-  </Layout>
-)
+const BlogPostLayout = ({ data }) => {
+  console.log(data.wpgraphql.post.content)
+
+  return (
+    <Layout
+      seoTitle={data.wpgraphql.post.title}
+      seoDescription={data.wpgraphql.post.excerpt}
+    >
+      <Section
+        noBottomPadding
+        background="var(--gray)"
+        maxWidth={blogPostWidth}
+      >
+        <header style={{ paddingBottom: "4rem" }}>
+          <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
+          <div>
+            <StyledLink to="/about">Bob Worden Esq.</StyledLink>
+            <span style={{ margin: "0rem 1rem" }}>|</span>
+            {getFormattedDate(data.wpgraphql.post.date)}
+          </div>
+        </header>
+      </Section>
+      <Section noBottomPadding noTopPadding maxWidth={blogPostWidth}>
+        <Excerpt
+          dangerouslySetInnerHTML={{
+            __html: sanitize(data.wpgraphql.post.excerpt),
+          }}
+        />
+        <Body
+          dangerouslySetInnerHTML={{
+            __html: data.wpgraphql.post.content,
+          }}
+        />
+      </Section>
+    </Layout>
+  )
+}
 
 export default BlogPostLayout
 

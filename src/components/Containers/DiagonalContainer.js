@@ -23,10 +23,10 @@ const StyledContainer = styled.div`
       0% 100%
     );
     -webkit-clip-path: polygon(
-      0% calc(6vw + 7rem),
-      100% 7rem,
-      100% calc(100% - 6vw - 7rem),
-      0% calc(100% - 7rem)
+      0% calc(6vw + 3rem),
+      100% 3rem,
+      100% calc(100% - 6vw - 3rem),
+      0% calc(100% - 3rem)
     );
     min-height: 25rem;
   }

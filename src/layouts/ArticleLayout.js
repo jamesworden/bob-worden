@@ -21,7 +21,7 @@ const StyledArticle = styled.div`
   }
 `
 
-const StyledTitle = styled.h2`
+const StyledTitle = styled.h1`
   text-align: left;
   max-width: 50rem;
 `
