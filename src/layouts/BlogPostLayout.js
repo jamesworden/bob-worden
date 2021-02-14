@@ -43,43 +43,35 @@ const Body = styled.div`
   }
 `
 
-const BlogPostLayout = ({ data }) => {
-  console.log(data.wpgraphql.post.content)
-
-  return (
-    <Layout
-      seoTitle={data.wpgraphql.post.title}
-      seoDescription={data.wpgraphql.post.excerpt}
-    >
-      <Section
-        noBottomPadding
-        background="var(--gray)"
-        maxWidth={blogPostWidth}
-      >
-        <header style={{ paddingBottom: "4rem" }}>
-          <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
-          <div>
-            <StyledLink to="/about">Bob Worden Esq.</StyledLink>
-            <span style={{ margin: "0rem 1rem" }}>|</span>
-            {getFormattedDate(data.wpgraphql.post.date)}
-          </div>
-        </header>
-      </Section>
-      <Section noBottomPadding noTopPadding maxWidth={blogPostWidth}>
-        <Excerpt
-          dangerouslySetInnerHTML={{
-            __html: sanitize(data.wpgraphql.post.excerpt),
-          }}
-        />
-        <Body
-          dangerouslySetInnerHTML={{
-            __html: data.wpgraphql.post.content,
-          }}
-        />
-      </Section>
-    </Layout>
-  )
-}
+const BlogPostLayout = ({ data }) => (
+  <Layout
+    seoTitle={data.wpgraphql.post.title}
+    seoDescription={data.wpgraphql.post.excerpt}
+  >
+    <Section noBottomPadding background="var(--gray)" maxWidth={blogPostWidth}>
+      <header style={{ paddingBottom: "4rem" }}>
+        <StyledTitle>{data.wpgraphql.post.title}</StyledTitle>
+        <div>
+          <StyledLink to="/about">Bob Worden Esq.</StyledLink>
+          <span style={{ margin: "0rem 1rem" }}>|</span>
+          {getFormattedDate(data.wpgraphql.post.date)}
+        </div>
+      </header>
+    </Section>
+    <Section noBottomPadding noTopPadding maxWidth={blogPostWidth}>
+      <Excerpt
+        dangerouslySetInnerHTML={{
+          __html: sanitize(data.wpgraphql.post.excerpt),
+        }}
+      />
+      <Body
+        dangerouslySetInnerHTML={{
+          __html: data.wpgraphql.post.content,
+        }}
+      />
+    </Section>
+  </Layout>
+)
 
 export default BlogPostLayout
 

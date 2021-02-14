@@ -15,6 +15,7 @@ body {
   background-color: var(--white);
   font-family: "lato";
   font-weight: normal;
+  height: 100%;
 }
 
 h1 {
@@ -87,7 +88,7 @@ button {
   li,
   div,
   button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 

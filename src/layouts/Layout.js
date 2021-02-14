@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 const Layout = ({ children, seoTitle, seoDescription, home }) => {
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
 
   return (
     <div
