@@ -35,7 +35,7 @@ const Excerpt = styled.div`
 `
 
 const Body = styled.div`
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   justify-content: center;
   img {
     max-width: 100%;
