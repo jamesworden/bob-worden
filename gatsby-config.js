@@ -3,6 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Bob Worden Esq.",
     description: "Mediator & Arbitrator",
+    image: "../src/images/landing-desktop.jpg",
     keywords: "Law, Lawyer, Mediator, Arbitrator",
     url: "https://www.bobworden.com",
   },
