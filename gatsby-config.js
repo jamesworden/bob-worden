@@ -58,6 +58,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-191693427-2",
+      },
+    },
+    {
       resolve: `gatsby-plugin-page-progress`,
       options: {
         includePaths: [{ regex: "^/blog/" }, { regex: "^/articles/" }],
